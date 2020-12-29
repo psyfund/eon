@@ -1,6 +1,6 @@
 var dp=jQuery;
 var hoverDone;
-// console.log = function(){};
+console.log = function(){};
 dp(document).ready(function() {
     Grid.init();
     dp('.bg-about').parallax("10%", 1);
@@ -73,7 +73,7 @@ dp(document).ready(function() {
         },0);
         $(".fullfilter-hover").animate({
             opacity: 0.92
-        },0);
+        },500);
         $(".fullfilter").animate({
             opacity: 0
         },1500);
@@ -83,7 +83,7 @@ dp(document).ready(function() {
         },0);
         $(".lightning-video").animate({
             opacity: 0.7
-        },0);
+        },5000);
         $(".fullfilter-hover").animate({
             opacity: 0
         },1500);
@@ -93,6 +93,8 @@ dp(document).ready(function() {
         $(".fullfilter-hover").animate({
             opacity: 0
         },700);
+
+        $(".fullfilter-hover").css("background", "linear-gradient(0deg, #ff006a, hsl(66deg 100% 50% / 98%), #a900ff)");
         // $(".fullfilter").css("background","linear-gradient(0deg,#bd1ebf, hsla(186, 100%, 50%, 0.98),#213994)");
 
         $(".fullfilter-clicked").animate({
@@ -129,54 +131,54 @@ function pulseAnimation() {
     var neonMayFadeOut = false;
     var neonFadeOut = true;
 
-        setTimeout(function(){
+    setTimeout(function(){
 
-            setInterval(function(){
+        setInterval(function(){
             // setTimeout(function(){
             //     console.log('check neon fadeIn');
-                if (!hoverDone && !neonMayFadeOut){
-                    $(".lightning-video").animate({
-                        opacity: 1
-                    },0);
-                    $(".fullfilter-hover").animate({
-                        opacity: 0.92
-                    },500, function(){
-                        neonFadeOut = false;
-                        neonMayFadeOut = true;
-                        console.log('neonMayFadeOut', neonMayFadeOut);
-                    });
-                    console.log('neon fadeIn');
-                    $(".fullfilter").animate({
-                        opacity: 0
-                    },1500);
-                }
-            }, 5100);
+            if (!hoverDone && !neonMayFadeOut){
+                $(".lightning-video").animate({
+                    opacity: 1
+                },0);
+                $(".fullfilter-hover").animate({
+                    opacity: 0.92
+                },500, function(){
+                    neonFadeOut = false;
+                    neonMayFadeOut = true;
+                    console.log('neonMayFadeOut', neonMayFadeOut);
+                });
+                console.log('neon fadeIn');
+                $(".fullfilter").animate({
+                    opacity: 0
+                },1500);
+            }
+        }, 5100);
 
-            setInterval(function(){
+        setInterval(function(){
             // setTimeout(function(){
-                console.log('check neon fadeOut');
-                if (!hoverDone && neonMayFadeOut && !neonFadeOut) {
+            console.log('check neon fadeOut');
+            if (!hoverDone && neonMayFadeOut && !neonFadeOut) {
 
-                    $(".fullfilter").animate({
-                        opacity: 0.97
-                    },0);
-                    $(".lightning-video").animate({
-                        opacity: 0.7
-                    },0);
-                    $(".fullfilter-hover").animate({
-                        opacity: 0
-                    },1500, function () {
-                        neonFadeOut = true;
+                $(".fullfilter").animate({
+                    opacity: 0.97
+                },0);
+                $(".lightning-video").animate({
+                    opacity: 0.7
+                },0);
+                $(".fullfilter-hover").animate({
+                    opacity: 0
+                },1500, function () {
+                    neonFadeOut = true;
 
-                        setTimeout(function(){
-                            neonMayFadeOut = false;
-                            console.log('neon blink timeout');
-                            console.log('neonMayFadeOut', neonMayFadeOut);
-                        }, 25000);
+                    setTimeout(function(){
+                        neonMayFadeOut = false;
+                        console.log('neon blink timeout');
+                        console.log('neonMayFadeOut', neonMayFadeOut);
+                    }, 25000);
 
-                    });
-                    console.log('neon fadeOut');
-                }
-            },22000);
-        },8000);
+                });
+                console.log('neon fadeOut');
+            }
+        },22000);
+    },8000);
 }
