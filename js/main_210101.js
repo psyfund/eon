@@ -199,7 +199,7 @@ dp(document).ready(function() {
         },100);
 
         $(".fullfilter").animate({
-            opacity: 0.4
+            opacity: 0.8
         },500);
 
         // $(".fullfilter-clicked-2").css("background","linear-gradient(90deg, rgba(245, 35, 132, 0.99) 32%, rgb(239, 0, 255), rgba(46, 34, 142, 0) 36%)");
