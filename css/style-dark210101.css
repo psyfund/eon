@@ -599,6 +599,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .plyr__video-wrapper video {
-    width: auto;
-    height: auto;
+    /*width: auto;*/
+    /*height: auto;*/
 }
