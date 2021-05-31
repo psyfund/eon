@@ -72,7 +72,8 @@ dp(document).ready(function() {
         title: 'Traili fluid',
         sources: [
             {
-                src: 'https://storage.googleapis.com/psyfund/video/tr.webm',
+                // src: 'https://storage.googleapis.com/psyfund/video/tr.webm',
+                src: 'https://psyfund.com/video/tr.webm',
                 type: 'video/webm',
                 size: 1080
             }
